@@ -1,0 +1,6 @@
+#ifndef CPSYNC_CONFIG_H
+#define CPSYNC_CONFIG_H
+
+#cmakedefine PROJECT_DIR "@PROJECT_DIR@"
+
+#endif
