@@ -41,7 +41,7 @@ void CreateDaemon(const struct CpSyncCmdData* cmdData, void(*SigUsrCallback)(int
   signal(SIGCHLD, SIG_IGN); /// sygnał o zakończeniu się procesu potomnego ignoruje się
   signal(SIGHUP, SIG_IGN); /// sygnał o zamknięciu kontrolującego go terminala ignoruje się
   signal(SIGUSR1, SigUsrCallback); /// syngał usr1 (kill -10) ustaw custom callback
-  signal(SIGKILL, SigUsrCallback);
+  signal(SIGUSR2, SigUsrCallback);
     
   /* druga operacja fork */
   pid = fork();

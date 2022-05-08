@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define FILL(ptr, size, value) 
-
 /**
  * @brief recursivly removes files starting from dirPath
  * 
@@ -78,7 +76,7 @@ void NativeSync(
       if(strcmp(fInfoSrc[s_i].name, fInfoDst[d_i].name) == 0)
       {
         existenceArray[d_i] = true;
-        if(fInfoSrc[s_i].mTime_nsec/1000 == fInfoDst[d_i].mTime_nsec/1000)
+        if(fInfoSrc[s_i].mTime_nsec/1000 == fInfoDst[d_i].mTime_nsec/1000) /// => in Fi
         {
           copy = false;
           break;

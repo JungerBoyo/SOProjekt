@@ -16,11 +16,11 @@ static bool quit = false;
 
 void WakeUpCallback(int signalID)
 {
-  if(signalID == SIGUSR1)
+  if(signalID == SIGUSR1) // 10
   {
     pthread_cond_signal(&condVar);
   }
-  else if(signalID == SIGKILL)
+  else if(signalID == SIGUSR2) // 12
   {
     pthread_cond_signal(&condVar);
     quit = true;
