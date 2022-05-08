@@ -2,7 +2,7 @@
 
 #include "Log.h"
 
-#include <internal_use_only/config.h>
+#include <project_configs/config.h>
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -96,7 +96,7 @@ void MirrorFileTo(const struct FileInfo* file, const char* dirPath, uint64_t thr
     exit(EXIT_FAILURE);
   }
 
-  int32_t dstFile = open(dstFilePath, O_WRONLY|O_CREAT|O_TRUNC);
+  int32_t dstFile = open(dstFilePath, O_WRONLY|O_CREAT|O_TRUNC, 0777);
   if(dstFile == -1)
   {
     SystemLog(LOGTYPE_ERROR, "open() error, dstFilePath = %s", dstFilePath);
