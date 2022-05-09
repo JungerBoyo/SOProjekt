@@ -47,9 +47,7 @@ int main(int32_t argc, const char* const* argv)
     SyncDirs(&cmdData);
     
     SystemLog(LOGTYPE_INFO, "going to sleep");
-
-    sleep(cmdData.sleepTime);
-
+    
     time_t currTime;
     time(&currTime);
 
